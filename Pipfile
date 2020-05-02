@@ -1,0 +1,13 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+mxnet-cu101mkl = "==1.6.0b20191125"
+jupyter = "*"
+
+[requires]
+python_version = "3.8"
