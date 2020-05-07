@@ -1,0 +1,3 @@
+[submodule "subcellular_localization"]
+	path = subcellular_localization
+	url = https://github.com/JJAlmagro/subcellular_localization
