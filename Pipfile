@@ -3,11 +3,20 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[[source]]
+name = "mxnet"
+url = "https://dist.mxnet.io/python"
+verify_ssl = true
+
 [dev-packages]
 
 [packages]
 jupyter = "*"
-mxnet-cu102mkl = {editable = true,uri = "file+https://repo.mxnet.io/dist/python/cu102mkl/mxnet_cu102mkl-1.6.0-py2.py3-none-win_amd64.whl"}
+mxboard = "*"
+tensorboard = "*"
+matplotlib = "*"
+panda = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.6"
