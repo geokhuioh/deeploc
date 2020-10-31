@@ -2,9 +2,7 @@ import mxnet as mx
 import numpy as np
 import time
 import mxnet.ndarray as nd
-import mxnet.initializer as init
 from mxnet import npx, autograd, optimizer, gluon
-from mxnet.gluon import nn, rnn
 from mxboard import SummaryWriter
 from model import Model
 from util import ConfusionMatrix
@@ -21,8 +19,8 @@ drop_hid = 0.5             #-- float, hidden neurons dropout
 n_filt_1 = 20              #-- integer, number of filter in the first convolutional layer
 n_filt_2 = 128             #-- integer, number of filter in the second convolutional layer
 seed     = 123456          #-- seed
-loss_fn  = 'cross_entropy' #-- 'cross_entropy' or 'cosine' loss function
-encoding = 'profile'       #-- 'onehot', 'blomap', 'blosum62' or 'profile'
+loss_fn  = 'cosine'        #-- 'cross_entropy' or 'cosine' loss function
+encoding = 'blomap'        #-- 'onehot', 'blomap', 'blosum62' or 'profile'
 
 #
 # Initialization
@@ -284,3 +282,6 @@ def train():
                 net.save_parameters(net_params_path)
 
     sw.close()
+
+if __name__ == 'main':
+    train()
